@@ -1,0 +1,121 @@
+/* Main Container */
+.Home_second {
+    background-color: #9bf27963;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    contain: content; /* Optimize rendering */
+}
+
+/* Top Section */
+.Home_second_top {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.Home_second_top h1 {
+    font-size: clamp(36px, 5vw, 48px);
+    color: #333;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Grid Layout */
+.Home_second_grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 500px));
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Grid Items */
+.Home_second_item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 
+        opacity 0.5s ease-out,
+        transform 0.5s ease-out,
+        box-shadow 0.3s ease;
+    will-change: transform, opacity;
+}
+
+/* Animation Classes */
+.Home_second_item.slide-in-left,
+.Home_second_item.slide-in-right {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effects */
+.Home_second_item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Icons */
+.Home_second_item img {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+.Home_second_item:hover img {
+    transform: scale(1.1);
+}
+
+.Home_second_item h3 {
+    font-size: clamp(20px, 2.5vw, 24px);
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.Home_second_item p {
+    font-size: clamp(14px, 1.5vw, 16px);
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Home_second_grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .Home_second_item {
+        width: 100%;
+    }
+
+    .Home_second_top h1 {
+        font-size: 32px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .Home_second_item {
+        transition: none;
+        transform: none;
+        opacity: 1;
+    }
+
+    .Home_second_item:hover {
+        transform: none;
+    }
+
+    .Home_second_item:hover img {
+        transform: none;
+    }
+}

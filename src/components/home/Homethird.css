@@ -1,0 +1,240 @@
+/* Base styles with optimized properties */
+.Home_third {
+    background-color: #fff; /* Shortened hex code */
+    padding: 2rem; /* Using rem for better scaling */
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 10%); /* Modern RGB syntax */
+    container-type: inline-size; /* For container queries */
+}
+
+/* Optimized top section */
+.top_head {
+    display: grid; /* More efficient than flex for this layout */
+    place-items: center;
+    color: #333;
+    text-align: center;
+}
+
+.top_head h1 {
+    margin-top: 1.25rem;
+    font-size: clamp(2rem, 5vw, 3.438rem); /* Responsive font size */
+    color: inherit; /* Inherits from parent */
+}
+
+.top_head p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: #555;
+}
+
+/* Optimized slider container */
+.Templates_Slider {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Three-column layout for buttons and content */
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+/* Optimized templates container */
+.templates_images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 1.25rem;
+    padding: 1.25rem;
+    background: linear-gradient(90deg, #dbeafe, #e0f7ff); /* Optimized gradient syntax */
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 10%);
+}
+
+/* Optimized image container */
+.image-container {
+    aspect-ratio: 3/4; /* Maintains consistent image ratio */
+    position: relative;
+    background-color: #f5f5f5;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 10%);
+    overflow: hidden;
+    will-change: transform; /* Optimizes animations */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Optimized image styles */
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Better image scaling */
+    will-change: transform;
+    transition: transform 0.3s ease;
+}
+
+/* Optimized button styles */
+.use-template-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    padding: 0.625rem 1.25rem;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #fff;
+    border: none;
+    border-radius: 0.313rem;
+    cursor: pointer;
+    font-size: 1rem;
+    opacity: 0;
+    z-index: 2;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Optimized hover states */
+.image-container:hover {
+    box-shadow: 0 0.313rem 0.938rem rgb(0 0 0 / 20%);
+}
+
+.image-container:hover .image {
+    transform: scale(1.03);
+    filter: blur(2px);
+}
+
+.image-container:hover .use-template-button {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Optimized slider buttons */
+.slider-button {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #fff;
+    border: none;
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-size: 2em;
+    box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 20%);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
+}
+
+/* Optimized media queries for responsiveness */
+@media (max-width: 768px) {
+    .templates_images {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+    
+    .slider-button {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5em;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .image-container,
+    .image,
+    .use-template-button,
+    .slider-button {
+        transition: none;
+    }
+}
+
+.use-template-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Different button styles */
+.button-basic {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button-premium {
+    background-color: #FFD700;
+    color: #333;
+    border: 2px solid #FFA500;
+}
+
+.button-pro {
+    background-color: #2196F3;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.button-start {
+    background-color: #9C27B0;
+    color: white;
+    border-radius: 25px;
+}
+
+.button-design {
+    background-color: #F44336;
+    color: white;
+    text-transform: uppercase;
+}
+
+.button-standard {
+    background-color: #607D8B;
+    color: white;
+    border: 1px solid #455A64;
+}
+
+.button-preview {
+    background-color: #009688;
+    color: white;
+    font-size: 0.9em;
+}
+
+.button-quick {
+    background-color: #FF5722;
+    color: white;
+    font-weight: bold;
+}
+
+.button-theme {
+    background-color: #673AB7;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hover effects */
+.use-template-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Active state */
+.use-template-button:active {
+    transform: translateY(1px);
+}
+
+/* Additional hover effects for specific buttons */
+.button-premium:hover {
+    background-color: #FFE44D;
+    border-color: #FFB74D;
+}
+
+.button-pro:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.button-start:hover {
+    padding: 10px 25px;
+}
+
+/* Ensure buttons are responsive */
+@media (max-width: 768px) {
+    .use-template-button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}

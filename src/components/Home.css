@@ -1,0 +1,242 @@
+/* Main Container */
+.Home_first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+    background: rgb(9, 94, 94);
+    padding-top: 80px;
+    animation: gradient 10s ease infinite;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .landing-container {
+    padding-top: 80px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+    will-change: opacity, transform;
+  }
+  
+  @keyframes fadeInSlideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Left Section */
+  .Home_first_left {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .top_heading h1 {
+    font-size: 45px;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .top_para p {
+    font-size: 18px;
+    color: #f1f1f1;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-out forwards;
+  }
+  
+  .top_button  button {
+    border: none;
+    background-color: #fff;
+    color: #000;
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    /* animation: pulseButton 1.5s ease-in-out infinite; */
+  }
+  
+  @keyframes pulseButton {
+    0% {
+      transform: scale(1);
+      background-color: white;
+    }
+    50% {
+      transform: scale(1.1);
+      background-color: white;
+    }
+    100% {
+      transform: scale(1);
+      background-color: white;
+    }
+  }
+  
+  .top_button button:hover {
+    transform: scale(1.2);
+
+    background-color: #000;
+    color: #fff;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Right Section (Slider) */
+  .Home_first_right {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    padding: 20px;
+  }
+  
+  .slider-home, .slider2-home {
+    position: relative;
+    width: 250px;
+    height: 500px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide-home_track {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: calc(250px * 6);
+    animation: scroll 80s linear infinite;
+  }
+  .slide-home_track2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: calc(250px * 6);
+    animation: scroll2 80s linear infinite;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(calc(-320px * 3));
+    }
+  }
+  @keyframes scroll2 {
+    100% {
+      transform: translateY(0);
+    }
+    0% {
+      transform: translateY(calc(-320px * 3));
+    }
+  }
+  .slide-home, .slide2-home {
+    height: 320px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 100px;
+    animation: zoomInEffect 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
+  }
+  
+  @keyframes zoomInEffect {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .slide-home img, .slide2-home img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .slide-home img:hover, .slide2-home img:hover {
+    transform: scale(1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Additional Animations for Image Hover */
+  .slide-home img {
+    animation: imageAnimation 1s ease-out forwards;
+  }
+  
+  @keyframes imageAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .Home_first {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .Home_first_left {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .Home_first_right {
+      width: 100%;
+      display: block;
+    }
+  
+    .slider-home, .slider2-home {
+      width: 100%;
+      height: 400px;
+    }
+  
+    .slide-home img, .slide2-home img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  
+    .top_heading h1 {
+      font-size: 30px;
+    }
+  
+    .top_para p {
+      font-size: 16px;
+    }
+  
+    .top_button a button {
+      padding: 12px 25px;
+      font-size: 14px;
+    }
+  }
+  

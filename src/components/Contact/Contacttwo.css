@@ -1,0 +1,126 @@
+/* Main Container */
+.ContactDetails {
+    padding: 40px;
+    background: linear-gradient(45deg, #6b7c93, #aab3c8);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    animation: backgroundFade 3s ease-in-out infinite alternate;
+}
+
+/* Header Section */
+.ContactDetails_header {
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards 0.5s;
+}
+
+.ContactDetails_header h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.ContactDetails_header p {
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+/* Content Section */
+.ContactDetails_content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards 1s;
+}
+
+.details_item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: slideInUp 0.8s ease-out forwards;
+}
+
+.details_item:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.details_item i {
+    font-size: 30px;
+    color: #007bff;
+    margin-right: 20px;
+    animation: bounceIcon 1s ease-in-out infinite;
+}
+
+.details_item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.details_item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes backgroundFade {
+    0% {
+        background: linear-gradient(45deg, #6b7c93, #aab3c8);
+    }
+    50% {
+        background: linear-gradient(45deg, #aab3c8, #6b7c93);
+    }
+    100% {
+        background: linear-gradient(45deg, #6b7c93, #aab3c8);
+    }
+}
+
+@keyframes bounceIcon {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ContactDetails_content {
+        grid-template-columns: 1fr;
+    }
+
+    .ContactDetails_header h1 {
+        font-size: 28px;
+    }
+
+    .ContactDetails_header p {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,605 @@
+/* General styles */
+.app-container {
+  padding-top: 80px;
+  display: flex;
+  min-height: 100vh; 
+  background-image: url(../TemplatesImages/SignUp.jpg);
+  background-size: cover;
+}
+
+/* Left side: Form container */
+.form-container {
+  width: 50%;
+  padding: 20px;
+  background-color: transparent;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  height: 1000px;
+  overflow-y: auto;
+}
+.work-exp h4{
+  color: #007bff;
+  padding-left: 10px;
+}
+
+.top-section-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: first baseline;
+  align-items: center;
+  height: 200px;
+  background-color: #88888834;
+  padding-top: 28px;
+}
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* Right side: Resume preview */
+.preview-container {
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  /* overflow-y: auto; */
+  /* scrollbar-color: transparent; */
+}
+
+.resume-preview {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.five-resume-left{
+  min-height: 800px;
+  width: 40%;
+  padding-top: 30px;
+  background-color: #1A2C38;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.five-resume-right{
+  width: 60%;
+}
+.resume-preview h1 {
+  font-size: 28px;
+  color: #1A2C38;
+  margin-bottom: 5px;
+}
+.resume-preview h1 span{
+  color: #007bff;
+}
+.details-left{
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+}
+ 
+
+#left-top,#left-top2,#left-top3,#left-top6{
+  color: white;
+  background-color: #007bff;
+  font-size: 20px;
+  text-align: center;
+}
+#left-top4, #left-top5{
+  color: white;
+  background-color: #007bff;
+  font-size: 20px;
+  text-align: center;
+  width: 350px;
+}
+
+.language-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.selected-languages {
+  margin-top: 1rem;
+}
+
+.selected-languages h4 {
+  margin-bottom: 0.5rem;
+}
+
+.selected-languages ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.selected-languages li {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.25rem 0.5rem;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.languages-section {
+  margin-top: 1rem;
+  /* height: 80px; */
+}
+
+.languages-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.languages-section li {
+  margin: 0.25rem 0;
+}
+
+.five-resume-left hr {
+  margin: 20px 0;
+}
+
+.five-resume-left h3 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.five-resume-left ul {
+  list-style-type: none;
+  
+  margin: 0;
+  padding-left: 20px;
+}
+
+.five-resume-left ul li {
+  margin-bottom: 5px;
+  width: 200px;
+  color: #fff;
+  position: relative;
+  padding-left: 15px;
+}
+.five-resume-left ul li::before{
+  content: "•"; /* Unicode bullet character */
+  color: #007bff; /* Bullet color - matches your existing blue accent */
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+  line-height: 1;
+}
+.five-resume-left .placeholder-text {
+  color: #888 !important;
+  font-style: italic;
+}
+.five-resume-right h6{
+  font-size: 14px;
+}
+/* Profile Photo */
+.photo-container {
+  /* text-align: center; */
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* border: 2px solid #007bff; */
+}
+
+
+
+
+.form-container form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.download-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+}
+.phone-con img{
+  height: 18px;
+  width: 18px;
+}
+.phone-con{
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  gap: 12px;
+}
+.phone-con h5{
+  font-size: 14px;
+  color: #fff;
+}
+.details-left p{
+  color: white;
+  font-size: 12px;
+}
+.buttons-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.button button{
+  background-color: black;
+  color: #fff;
+}
+
+.work-exp{
+  padding: 20px;
+  height: 300px;
+}
+.education{
+  padding: 20px;
+  height: 300px;
+}
+/* A4 page styling */
+.a4-page {
+  width: 210mm;
+  height: 297mm;
+  padding: 20mm;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Print specific styles */
+@media print {
+  .form-container,
+  .button-container,
+  .color-buttons {
+    display: none !important;
+  }
+  
+  .preview-container {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+  }
+
+  .app-container {
+    padding: 0;
+    background-image: none;
+  }
+
+  .resume-preview {
+    box-shadow: none;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media screen and (max-width: 768px) {
+  .app-container {
+    padding-top: 40px;
+  }
+
+  .form-container,
+  .preview-container {
+    padding: 10px;
+  }
+
+  .resume-preview {
+    flex-direction: column;
+  }
+
+  .five-resume-left {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .photo-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .work-exp,
+  .education {
+    height: auto;
+    min-height: 200px;
+  }
+
+  .color-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (max-width: 992px) {
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-group {
+    min-width: 100%;
+  }
+
+  .button {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .app-container {
+    flex-direction: column;
+    padding-top: 60px;
+  }
+
+  .form-container,
+  .preview-container {
+    width: 100%;
+  }
+
+  .resume-preview {
+    max-width: 100%;
+  }
+ 
+  .five-resume-left,
+  .five-resume-right {
+    width: 100%;
+  }
+}
+/* Extra small devices (phones, 400px and down) */
+@media screen and (max-width: 400px) {
+  .form-container {
+    padding: 10px;
+  }
+
+  .photo-container,
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .five-resume-left ul li {
+    width: 160px;
+  }
+
+  #left-top4, 
+  #left-top5 {
+    width: 100%;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+}
+/* Language selection styling */
+.languages-section {
+  margin-bottom: 2rem;
+}
+
+.language-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.selected-languages {
+  margin-top: 1.5rem;
+}
+
+.language-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-height: 50px;
+}
+
+.selected-language {
+  display: inline-flex;
+  align-items: center;
+  background: #e3f2fd;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #1976d2;
+}
+
+.remove-language {
+  background: none;
+  border: none;
+  color: #666;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-language:hover {
+  color: #d32f2f;
+}
+
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .a4-page {
+    transform: scale(0.8);
+    transform-origin: top center;
+  }
+}
+
+@media (max-width: 768px) {
+  .a4-page {
+    transform: scale(0.6);
+  }
+  .action-buttons {
+    flex-direction: column;
+  }
+}
+.resume-preview {
+  width: 100%;
+  max-width: 210mm; /* A4 width */
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.action-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.print-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.download-button {
+  background-color: #2196F3;
+  color: white;
+}
+
+.button-icon {
+  font-size: 20px;
+}
+.color-buttons button{
+  padding: 5px;
+  background-color: transparent;
+  color: Black;
+  border-radius: 10px;
+}
+.color-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+@media print {
+  .form-container,
+  .button-container,
+  .color-buttons {
+    display: none !important;
+  }
+  
+  .preview-container {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+  }
+}
+.work-exp-con .con-left, .work-exp-con .con-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
