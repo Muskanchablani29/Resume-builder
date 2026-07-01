@@ -1,0 +1,335 @@
+/* UseTemplatenine.css */
+
+.t9-container {
+  display: flex;
+  gap: 24px;
+  padding: 90px 20px 40px;
+  max-width: 1500px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ── FORM ── */
+.t9-form {
+  flex: 1;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+}
+
+.t9-form h2 {
+  margin-bottom: 16px;
+  color: #1a1a1a;
+  font-size: 20px;
+}
+
+.t9-sec-label {
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #1a1a1a;
+  margin: 18px 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #555;
+}
+
+.t9-input-group {
+  margin-bottom: 10px;
+}
+
+.t9-input-group label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #444;
+}
+
+.t9-input-group input[type="text"],
+.t9-input-group input[type="email"],
+.t9-input-group input[type="tel"],
+.t9-input-group textarea {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.t9-input-group textarea {
+  min-height: 72px;
+  resize: vertical;
+}
+
+/* ── PREVIEW PANEL ── */
+.t9-preview {
+  flex: 1.4;
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+}
+
+.t9-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.t9-preview-header h2 {
+  color: #1a1a1a;
+  font-size: 18px;
+  margin: 0;
+}
+
+.t9-preview-btns { display: flex; gap: 10px; }
+
+.t9-print-btn,
+.t9-back-btn {
+  padding: 7px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.t9-print-btn { background: #444; color: #fff; }
+.t9-print-btn:hover { background: #222; }
+.t9-back-btn { background: #ddd; color: #333; }
+.t9-back-btn:hover { background: #ccc; }
+
+/* ── RESUME DOCUMENT ── */
+.t9-resume {
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 11px;
+  color: #222;
+  min-height: 900px;
+}
+
+/* ── HEADER ── */
+.t9-header {
+  padding: 16px 20px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.t9-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.t9-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.t9-photo {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid #ccc;
+}
+
+.t9-photo-placeholder {
+  width: 70px;
+  height: 70px;
+  background: #ddd;
+  border: 1px solid #ccc;
+}
+
+.t9-header-name-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.t9-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.t9-job-title {
+  font-size: 12px;
+  color: #555;
+}
+
+.t9-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.t9-contact-line {
+  font-size: 10.5px;
+  color: #333;
+}
+
+.t9-header-divider {
+  height: 1px;
+  background: #bbb;
+  margin: 8px 0 6px;
+}
+
+.t9-address {
+  font-size: 10.5px;
+  color: #555;
+}
+
+/* ── BODY ── */
+.t9-body {
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Tagline */
+.t9-tagline {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.4;
+}
+
+/* Summary */
+.t9-summary {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Skills */
+.t9-skills-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.t9-skills-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.t9-skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.t9-skills-row {
+  display: flex;
+  gap: 0;
+}
+
+.t9-skill-item {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  font-size: 10.5px;
+  color: #333;
+  padding-right: 8px;
+}
+
+.t9-skill-dash {
+  color: #555;
+  flex-shrink: 0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Employment History */
+.t9-emp-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.t9-emp-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+.t9-exp-entry {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.t9-exp-left {
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.t9-exp-role {
+  font-size: 12px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.t9-exp-period {
+  font-size: 10.5px;
+  color: #666;
+}
+
+.t9-exp-right {
+  flex: 1;
+}
+
+.t9-bullets {
+  margin: 0;
+  padding-left: 14px;
+  list-style: disc;
+}
+
+.t9-bullets li {
+  font-size: 10.5px;
+  line-height: 1.65;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+/* Print */
+@media print {
+  .non-printable { display: none !important; }
+  .t9-resume { border: none; }
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .t9-container { flex-direction: column; padding-top: 80px; }
+  .t9-form, .t9-preview { max-height: none; }
+  .t9-exp-entry { flex-direction: column; }
+  .t9-exp-left { width: 100%; }
+  .t9-skills-row { flex-wrap: wrap; }
+}
