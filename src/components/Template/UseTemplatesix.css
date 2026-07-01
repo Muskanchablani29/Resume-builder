@@ -1,94 +1,383 @@
-/* General Layout */
-.container {
+/* UseTemplatesix.css */
+
+.t6-container {
   display: flex;
-  height: 100vh;
-  padding-top: 80px;
-  font-family: Arial, sans-serif;
+  gap: 24px;
+  padding: 90px 20px 40px;
+  max-width: 1500px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.form-container {
+/* ── FORM ── */
+.t6-form {
   flex: 1;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-right: 1px solid #ccc;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-height: calc(100vh - 110px);
   overflow-y: auto;
 }
 
-.preview-container {
-  flex: 2;
+.t6-form h2 {
+  margin-bottom: 16px;
+  color: #1a1a1a;
+  font-size: 20px;
+}
+
+.t6-sec-label {
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #1a1a1a;
+  margin: 18px 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #f9c233;
+}
+
+.t6-input-group {
+  margin-bottom: 10px;
+}
+
+.t6-input-group label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #444;
+}
+
+.t6-input-group input[type="text"],
+.t6-input-group input[type="email"],
+.t6-input-group input[type="tel"],
+.t6-input-group textarea {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.t6-input-group textarea {
+  min-height: 72px;
+  resize: vertical;
+}
+
+/* ── PREVIEW PANEL ── */
+.t6-preview {
+  flex: 1.4;
+  background: #f5f5f5;
   padding: 20px;
-  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-height: calc(100vh - 110px);
   overflow-y: auto;
 }
 
-/* Resume Layout */
-.resume {
+.t6-preview-header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.t6-preview-header h2 {
+  color: #1a1a1a;
+  font-size: 18px;
+  margin: 0;
+}
+
+.t6-preview-btns { display: flex; gap: 10px; }
+
+.t6-print-btn,
+.t6-back-btn {
+  padding: 7px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.t6-print-btn { background: #1a1a1a; color: #fff; }
+.t6-print-btn:hover { background: #333; }
+.t6-back-btn { background: #eee; color: #333; }
+.t6-back-btn:hover { background: #ddd; }
+
+/* ── RESUME DOCUMENT ── */
+.t6-resume {
+  display: flex;
+  background: #fff;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-  background-color: #ffffff;
-  height: 100%;
+  min-height: 900px;
+  font-size: 11px;
+  color: #222;
+}
+
+/* ── SIDEBAR ── */
+.t6-sidebar {
+  width: 170px;
+  flex-shrink: 0;
+  background: #f9c233;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Photo */
+.t6-photo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.t6-photo,
+.t6-photo-placeholder {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+.t6-photo-placeholder {
+  background: #e0a800;
+}
+
+/* Sidebar sections */
+.t6-sb-section { display: flex; flex-direction: column; gap: 5px; }
+
+.t6-sb-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.t6-sb-divider {
+  height: 2px;
+  background: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.t6-sb-text {
+  font-size: 10.5px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Contact */
+.t6-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 10.5px;
+  color: #1a1a1a;
+  margin-bottom: 3px;
+}
+
+.t6-icon {
+  font-size: 12px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Skills */
+.t6-skill-entry {
+  margin-bottom: 6px;
+}
+
+.t6-skill-name {
+  font-size: 10.5px;
+  color: #1a1a1a;
+  margin-bottom: 3px;
+}
+
+.t6-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.t6-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid #1a1a1a;
+  display: inline-block;
+}
+
+.t6-dot-filled {
+  background: #1a1a1a;
+}
+
+/* ── MAIN SECTION ── */
+.t6-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dark header */
+.t6-main-header {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 18px 20px 14px;
+}
+
+.t6-main-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.t6-first-name {
+  font-size: 26px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.t6-last-name {
+  font-size: 26px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.t6-main-subtitle {
+  font-size: 11px;
+  color: #ccc;
+  letter-spacing: 0.5px;
+}
+
+/* Body */
+.t6-main-body {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.t6-main-section { display: flex; flex-direction: column; }
+
+.t6-main-sec-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #1a1a1a;
+  margin-bottom: 3px;
+}
+
+.t6-main-divider {
+  height: 2px;
+  background: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+/* Experience */
+.t6-exp-entry {
+  margin-bottom: 10px;
+}
+
+.t6-exp-role {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.t6-exp-sep {
+  color: #555;
+  font-weight: 400;
+}
+
+.t6-exp-company {
+  font-weight: 400;
+  text-transform: none;
+  color: #444;
+}
+
+.t6-exp-period {
+  font-size: 10.5px;
+  color: #555;
+  margin: 2px 0 4px;
+}
+
+.t6-exp-bullets {
+  margin: 0;
+  padding-left: 16px;
+  list-style: disc;
+}
+
+.t6-exp-bullets li {
+  font-size: 10.5px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+/* Education */
+.t6-edu-entry {
+  margin-bottom: 6px;
+}
+
+.t6-edu-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.t6-edu-dot {
+  color: #f9c233;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.t6-edu-school {
+  font-size: 10.5px;
+  color: #888;
+  margin-left: 18px;
+  margin-top: 1px;
+}
+
+/* Interests */
+.t6-interests-list {
+  margin: 0;
+  padding-left: 16px;
+  list-style: disc;
+}
+
+.t6-interests-list li {
+  font-size: 10.5px;
+  line-height: 1.8;
   color: #333;
 }
 
-/* Sidebar */
-.resume-sidebar {
-  flex: 1;
-  background-color: #f9c233;
-  color: #000;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+/* Print */
+@media print {
+  .non-printable { display: none !important; }
+  .t6-resume { border: none; }
 }
 
-.resume-sidebar .photo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  margin: 0 auto 20px;
-}
-
-.resume-sidebar h3 {
-  font-size: 16px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #000;
-  padding-bottom: 5px;
-}
-
-.resume-sidebar p {
-  margin: 5px 0;
-}
-
-/* Main Section */
-.resume-main {
-  flex: 2;
-  padding: 20px;
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.header h1 {
-  font-size: 24px;
-  text-transform: uppercase;
-  margin: 0;
-  color: #000;
-}
-
-.resume-main h3 {
-  font-size: 18px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #333;
-  padding-bottom: 5px;
-}
-
-.resume-main p {
-  margin: 5px 0;
+/* Responsive */
+@media (max-width: 960px) {
+  .t6-container { flex-direction: column; padding-top: 80px; }
+  .t6-form, .t6-preview { max-height: none; }
+  .t6-resume { flex-direction: column; }
+  .t6-sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; }
 }
